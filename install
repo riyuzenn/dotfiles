@@ -1,0 +1,82 @@
+#!/bin/bash
+
+f=3 b=4
+for j in f b; do
+  for i in {0..7}; do
+    printf -v $j$i %b "\e[${!j}${i}m"
+  done
+done
+d=$'\e[1m'
+t=$'\e[0m'
+v=$'\e[7m'
+
+a=dotfiles
+b=@riyuzenn
+c=os
+d="$(uname -s)"
+e=sh
+f=$(basename $SHELL)
+colors=$(for i in {0..7}; do echo -en "\e[${1}$((30 + $i))m▁▁▁"; done)
+
+tput clear
+cat << EOF
+   ${f5}.${f3}-${f1}^${t}${f3}-${f5}.     $f6$a $t~ $b
+  ${f6}/${f7}_${f6}/${f7}_${f6}\\${f7}_${f6}\    $f6$e $t~ $f 
+ ${f4}' ' ${f1}J${f4} ' ' 
+$colors
+
+EOF
+
+CONFIG=$HOME/.config
+BIN=$HOME/.local/bin
+FONTS=$HOME/.local/share/fonts
+WALLS=$HOME/.local/share/backgrounds
+
+create_env() {
+   echo "I: Creating directories"
+   mkdir -p $CONFIG
+   mkdir -p $BIN
+   mkdir -p $FONTS
+   mkdir -p $WALLS
+   echo "S: Directories successfully created"
+}
+
+copy_cfg() {
+   echo  "I: Copying dotfiles, this may take a while..."
+   cp -r ./msc/fonts/* $FONTS
+   cp -r ./msc/bin/* $BIN 2> /dev/null
+   cp -r  ./cfg/* $CONFIG
+   cp -r ./msc/{.zsh,.Xresources,.xinitrc,.zshrc} $HOME
+   cp -r ./walls/* $WALLS
+   echo
+   echo "S: All configurations were successfully copied"
+   echo "Enjoy ricing :)"
+}
+change_nitrogen() {
+   echo "I: Creating nitrogen config"
+   
+   # argument (file path)
+   # since nitrogen does not allow $HOME or ~ we will override it manually
+
+   local file=$(realpath -s "$1")  
+   local text=$(<$file)
+   echo "${text/'$HOME'/$HOME}" > $file
+   
+   echo "S: Nitrogen config created"
+}
+
+if [ $(basename $PWD)  != dotfiles ]; then
+   echo "not inside the directory"
+   exit 1
+fi 
+
+# override nitrogen with home path
+create_env
+copy_cfg
+
+change_nitrogen $CONFIG/nitrogen/bg-saved.cfg 
+change_nitrogen $CONFIG/nitrogen/nitrogen.cfg 
+
+# scan all font directories
+fc-cache
+

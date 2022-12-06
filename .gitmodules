@@ -1,0 +1,7 @@
+[submodule "msc/.zsh/zsh-autosuggestions"]
+	path = msc/.zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+
+[submodule "cfg/nvim"]
+	path = cfg/nvim
+	url = https://github.com/riyuzenn/nvim

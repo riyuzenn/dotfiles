@@ -1,0 +1,18 @@
+# Launcher,~/.config/eww/scripts/appmenu,./assets/launcher.svg
+Favorites,^checkout(favorites),./assets/favorites.svg
+Calendar,~/.config/eww/scripts/pop calendar,./assets/calendar.svg
+^sep()
+Web Browser,firefox,./assets/web-browser.svg
+File Manager,nautilus,./assets/file-manager.svg
+Launch Terminal,alacritty,./assets/terminal.svg
+
+^sep()
+Lock Screen,~/.local/bin/lock,system-lock-screen
+Exit,~/.config/eww/scripts/pop power,system-log-out
+
+^tag(favorites)
+Discord,discord,discord
+Alacritty,alacritty,Alacritty
+VSCodium,code --unity-launch,vscodium
+Spotify,spotify --uri=%U,spotify
+

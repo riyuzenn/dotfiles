@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+rofi -midi drun -show drun -theme $HOME/.config/rofi/themes/appsmenu.rasi

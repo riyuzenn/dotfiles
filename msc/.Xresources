@@ -1,0 +1,37 @@
+! https://github.com/mountain-theme/
+! special
+*.foreground:   #e7e7e7
+*.background:   #0f0f0f
+*.cursorColor:  #e7e7e7
+
+! black
+*.color0:       #191919
+*.color8:       #262626
+
+! red
+*.color1:       #ac8a8c
+*.color9:       #c49ea0
+
+! green
+*.color2:       #aca98a
+*.color10:      #c4c19e
+
+! yellow
+*.color3:       #c6a679
+*.color11:      #ceb188
+
+! blue
+*.color4:       #8a98ac
+*.color12:      #a5b4bc
+
+! magenta
+*.color5:       #ac8aac
+*.color13:      #c49ec4
+
+! cyan
+*.color6:       #8aacab
+*.color14:      #9ec3c4
+
+! white
+*.color7:       #767676
+*.color15:      #a0a0a0

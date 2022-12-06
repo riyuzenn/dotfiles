@@ -1,0 +1,32 @@
+DATE=$(date '+%b%d-%H-%M:%S.png');
+
+EWW_BIN="$HOME/.local/bin/eww"
+
+hide_unhide_windows() {
+	while bspc node any.hidden.window -g hidden=off; do false; done && while bspc node 'any.!hidden.window' -g hidden=on; do :; done
+}
+
+
+run() {
+	sleep 0.2
+	systemctl $1
+}
+
+case $1 in
+	"poweroff")
+		run "poweroff" &
+		;;
+	"reboot")
+		run "reboot" &
+		;;
+	"suspend")
+		run "suspend" &
+		;;
+	"hibernate")
+		run "hibernate" &
+		;;
+	"logout")
+        sleep 0.2
+		bspc quit
+		;;
+esac

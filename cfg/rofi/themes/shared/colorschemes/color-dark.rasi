@@ -1,0 +1,15 @@
+* {
+  bg: #121212;
+  bg-semilight: #151515;
+  bg-light: #1f1f1f;
+  fg: #ecf2f2;
+  red: #FF598B;
+  wifi-accent: #FF598B;
+  blue: #33AEFF;
+  green: #1FE0A6;
+  bg-hover: #a0a0a0;
+  fg-hover: #15191f;
+  fg-unhover: #33AEFF;
+  network-header: url("assets/dark/network-header.png", height);
+  launcher-header: url("assets/dark/launcher-header.png", height);
+}
