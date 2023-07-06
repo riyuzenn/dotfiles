@@ -13,7 +13,7 @@
    
    <h4><samp>If you like my setup kindly press that :star: button! </samp></h4> <br>
    
-   > Note: some of configs were stolen. If you are the author, just open an issue.
+   > Note: some of configs were stolen. If you are the author, just open an issue for creds.
    
    <img src="assets/showcase.png" alt="Rice Showcase" align="right" width="400px">
    List of configurations I used to personalize my own system.  
