@@ -11,7 +11,7 @@
 </div>
   <br>
    
-   <h4><samp>If you like my setup kindly press that :star: button! </samp></h4> <br>
+   <h4><samp>If you like my setup kindly press that :star: button! (btw, its bloated) </samp></h4> <br>
    
    > Note: some of configs were stolen. If you are the author, just open an issue for creds.
    
