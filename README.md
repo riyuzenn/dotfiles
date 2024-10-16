@@ -11,8 +11,10 @@
 </div>
   <br>
    
-   <h4><samp>If you like my setup kindly press that :star: button! (btw, its bloated) </samp></h4> <br>
+   > [!WARNING]  
+   > Currently outdated. Ill try to update it soon :)
    
+   > [!NOTE]
    > Note: some of configs were stolen. If you are the author, just open an issue for creds.
    
    <img src="assets/showcase.png" alt="Rice Showcase" align="right" width="400px">
