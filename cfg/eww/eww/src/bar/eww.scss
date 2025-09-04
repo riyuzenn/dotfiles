@@ -1,0 +1,497 @@
+
+*{
+	all: unset;
+	font-family: Iosevka;
+}
+
+window#power {
+  background-color: $background;
+}
+
+/** General **/
+.bar_class {
+    background-color: $background;
+}
+.module {
+    margin: 0px 0px 0px 0px;
+    border-radius: 10px 16px 0px 10px;
+}
+
+/** tooltip!! **/
+tooltip.background {
+    background-color: $background;
+    font-size: 14;
+    border-radius: 10px;
+    color: #bfc9db;
+}
+
+tooltip label {
+    margin: 6px;
+}
+
+
+/** Widgets **/
+
+.clock_time_sep {
+    font-size: 14;
+    color: #bfc9db;
+    margin: 0px 4px 1px 4px;
+}
+.clock_time_class, .clock_minute_class {
+    font-size: 14;
+}
+.clock_date_class {
+    font-size: 14;
+    margin: 8px 10px 0px 20px;
+    color: $magenta;
+}
+.clock_minute_class {
+    margin: 0px 20px 0px 3px;
+    color: #bfc9db;
+}
+
+.clock_time_class {
+    color: #bfc9db;
+    margin: 8px 0px 0px 0px;
+}
+
+
+.membar {
+  color: $yellow;
+    background-color: #38384d;
+  border-radius: 10px;
+}
+.batbar {
+  color: $yellow;
+  
+    background-color: #38384d;
+  border-radius: 10px;
+}
+.brightbar trough highlight {
+  background-image: linear-gradient(to right, #e4c9af 30%, #f2cdcd 50%, $yellow 100% *50);
+  border-radius: 10px;
+}
+.volbar trough highlight {
+  background-image: linear-gradient(to right, #afcee0 30%, $accent 50%, #77a5bf 100% *50);
+  border-radius: 10px;
+}
+.volume_icon {
+    font-size: 14;
+    color: $accent;
+  margin: 0px 10px 0px 10px;
+}
+
+
+.module_essid {
+    font-size: 14;
+    color: $accent;
+  margin: 0px 10px 0px 0px;
+}
+.module-wif {
+    font-size: 14;
+    color: $accent;
+    border-radius: 100%;
+  margin: 0px 10px 0px 5px;
+}
+
+.iconmem {
+    color: $yellow;
+}
+.iconbat {
+    color: $green;
+}
+.iconbat, .iconmem {
+    font-size: 14;
+    margin: 8px;
+}
+.bright_icon {
+    font-size: 14;
+    color: #e4c9af;
+  margin: 0px 10px 0px 10px;
+}
+
+
+.separ {
+    color: #3e424f;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0px 8px 0px 8px;
+  }
+
+.mem_module {
+    background-color: $background;
+	border-radius: 16px;
+  margin: 0px 0px 0px 3px;
+  }
+.power_module {
+  color: $magenta;
+	border-radius: 16px;
+  margin: 0px 30px 0px 10px;
+}
+.bat_module {
+    background-color: $background;
+	border-radius: 16px;
+  margin: 0px 10px 0px 10px;
+  }
+
+
+scale trough {
+  all: unset;
+  background-color: #22242b;
+  box-shadow: 0 2px 3px 2px #06060b;
+  border-radius: 16px;
+  min-height: 10px;
+  min-width: 70px;
+  margin: 0px 10px 0px 0px;
+}
+
+.works {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 14px 20px 0px 20px;
+}
+
+.0 , .01, .02, .03, .04, .05, .06, 
+.011, .022, .033, .044, .055, .066,{
+  margin: 0px 8px 0px 0px;
+}
+
+/* Unoccupied */
+.0 {
+color: #3e424f;
+}
+
+/* Occupied */
+.01, .02, .03, .04, .05, .06, {
+  color: #bfc9db;
+}
+
+/* Focused */
+.011, .022, .033, .044, .055, .066, {
+  color: $accent;
+}
+
+
+.launcher {
+  font-size: 16px;	
+	min-height: 24px;
+	min-width: 24px;
+	margin: 10px 10px 10px 25px;
+	border-radius: 100px;
+}
+.launcher-btn {
+  margin-left: 20px;
+  &:hover {
+    color: $accent;
+  }
+}
+
+.song {
+	color: $accent;
+	font-size : 14px;
+	font-weight : bold;
+	margin : 3px 5px 0px 0px;
+}
+
+.song_btn_play {
+	color: $accent;
+	font-size : 14px;
+	margin : 3px 0px 0px 5px;
+
+}
+
+
+.song_btn_prev, .song_btn_next {
+	color: #bfc9db;
+	font-size : 14px;
+	margin : 3px 0px 0px 5px;
+
+}
+
+// Calendar
+.cal {
+  background-color: $background;
+  font-family: JetBrainsMono;
+  font-size: 14px;
+  font-weight: normal;
+
+.cal-in {
+    padding: 0px 10px 0px 10px;
+    color: #bfc9db;
+
+.cal {
+     &.highlight {
+          padding: 20px;
+      }
+
+      padding: 5px 5px 5px 5px;
+      margin-left: 10px;
+    }
+  }
+}
+
+calender {
+    color: #bfc9db;
+}
+calendar:selected {
+  color: $accent;
+}
+
+calendar.header {
+  color: $accent;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: $green;
+}
+
+calendar.highlight {
+  color: $accent;
+  font-weight: bold;
+}
+
+calendar:indeterminate {
+  color: #bfc9db;
+}
+
+
+.sys_sep {
+    color: #38384d;
+    font-size: 14;
+    margin: 0px 10px 0px 10px;
+}
+.sys_text_bat_sub, .sys_text_mem_sub {
+    font-size: 14;
+    color: #bbc5d7;
+    margin: 5px 0px 0px 25px;
+}
+.sys_text_bat, .sys_text_mem {
+    font-size: 14;
+    font-weight: bold;
+    margin: 14px 0px 0px 25px;
+}
+.sys_icon_bat, .sys_icon_mem {
+    font-size: 14;
+    margin: 30px;
+}
+.sys_win {
+    background-color: $background;
+}
+.sys_bat {
+  color: $green;
+    background-color: #38384d;
+  border-radius: 10px;
+}
+.sys_mem {
+  color: #e4c9af;
+    background-color: #38384d;
+  border-radius: 10px;
+}
+.sys_icon_bat, .sys_text_bat {
+    color: $green;
+}
+.sys_icon_mem, .sys_text_mem {
+    color: #e4c9af;
+}
+.sys_bat_box {
+	border-radius: 16px;
+    margin: 15px 10px 10px 20px;
+  }
+.sys_mem_box {
+	border-radius: 16px;
+    margin: 10px 10px 15px 20px;
+  }
+
+
+
+
+
+
+
+.music_pop {
+    background-color: $background;
+	border-radius: 16px;
+}
+  .music_cover_art {
+	background-size: cover;
+	background-position: center;
+	min-height: 100px;
+    box-shadow: 5px 5px 5px 5px #06060b;
+	min-width: 170px;
+	margin: 20px;
+	border-radius: 20px;
+}
+
+.music {
+	color: $accent;
+	font-size : 14px;
+	font-weight : bold;
+	margin : 20px 0px 0px -15px;
+}
+
+.music_artist {
+	color: #bbc5d7;
+	font-size : 16px;
+	font-weight : normal;
+	margin : 0px 0px 0px 0px;
+}
+
+.music_btn_prev, .music_btn_play, .music_btn_next {
+	font-family: Iosevka Nerd Font;
+}
+.music_btn_prev {
+	color: #bbc5d7;
+	font-size : 14px;
+	font-weight : normal;
+	margin: 0px 0px 0px 0px;
+}
+.music_btn_play {
+	color: $accent;
+	font-size : 14px;
+	font-weight : normal;
+	margin: 0px 0px 0px 0px;
+}
+.music_btn_next {
+	color: #bbc5d7;
+	font-size : 14px;
+	font-weight : normal;
+	margin: 0px 0px 0px 0px;
+}
+
+.music_bar scale trough highlight {
+	all: unset;
+    background-image: linear-gradient(to right, #afcee0 30%, $accent 50%, #77a5bf 100% *50);
+	border-radius: 24px;
+}
+.music_bar scale trough {
+	all: unset;
+	background-color: #232232;
+    box-shadow: 0 6px 5px 2px #06060b;
+	border-radius: 24px;
+	min-height: 13px;
+	min-width: 190px;
+	margin : -10px 10px 20px 0px;
+}
+
+.audio-box {
+    background-color: $background;
+	border-radius: 16px;
+}
+.speaker_icon {
+	background-size: cover;
+    background-image: url('images/speaker.png');
+	background-position: center;
+	min-height: 70px;
+	min-width: 75px;
+	margin: 10px 20px 5px 20px;
+	border-radius: 12px;
+}
+
+.speaker_text {
+	color: $accent;
+	font-size : 14px;
+	font-weight : bold;
+	margin: 20px 0px 0px 0px;
+}
+
+.speaker_bar scale trough highlight {
+	all: unset;
+    background-image: linear-gradient(to right, #afcee0 30%, $accent 50%, #77a5bf 100% *50);
+	border-radius: 24px;
+}
+.speaker_bar scale trough {
+	all: unset;
+	background-color: #232232;
+    box-shadow: 0 6px 5px 2px #06060b;
+	border-radius: 24px;
+	min-height: 13px;
+	min-width: 120px;
+	margin : 0px 0px 5px 0px;
+}
+
+
+
+
+.mic_icon {
+	background-size: cover;
+    background-image: url('images/mic.png');
+	background-position: center;
+	min-height: 70px;
+	min-width: 75px;
+	margin: 5px 20px 20px 20px;
+	border-radius: 12px;
+}
+
+.mic_text {
+	color: $accent;
+	font-size : 14px;
+	font-weight : bold;
+	margin: 0px 0px 0px 0px;
+}
+
+.mic_bar scale trough highlight {
+	all: unset;
+    background-image: linear-gradient(to right, #afcee0 30%, $accent 50%, #77a5bf 100% *50);
+	border-radius: 24px;
+}
+.mic_bar scale trough {
+	all: unset;
+    box-shadow: 0 6px 5px 2px #06060b;
+	background-color: #232232;
+	border-radius: 24px;
+	min-height: 13px;
+	min-width: 120px;
+	margin : 0px 0px 20px 0px;
+}
+
+.audio_sep {
+    color: #38384d;
+    font-size: 14;
+	margin : 0px 0px 0px 0px;
+}
+
+.power_menu {
+	button {
+		background-color: $background;
+		color: $yellow;
+		border: 3px solid #282828;
+		border-radius: 10px;
+		font-family: "Material Icons";
+		font-size: 32px;
+
+		margin: 0em .5em;
+		padding: .25em .50em .25em .50em;
+	}
+
+	.shutdown-btn {
+		color: $red;
+		&:hover {
+			border-color: $red;
+		}
+	}
+	.reboot-btn {
+		color: $green;
+		&:hover {
+			border-color: $green;
+		}
+	}
+	.sleep-btn {
+		color: $yellow;
+		&:hover {
+			border-color: $yellow;
+		}
+	}
+	.hibernate-btn {
+		color: $blue;
+		&:hover {
+			border-color: $blue;
+		}
+	}
+	.logout-btn {
+		color: $magenta;
+		&:hover {
+			border-color: $magenta;
+		}
+	}
+}

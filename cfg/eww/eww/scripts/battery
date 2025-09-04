@@ -1,0 +1,51 @@
+#!/bin/bash
+
+N_STATE_FILE="/tmp/battery_notif"
+if [[ ! -f "$N_STATE_FILE" ]]; then
+    echo "false" > "$N_STATE_FILE"
+fi
+
+NOTIFIED=$(cat "$N_STATE_FILE")
+
+battery() {
+	BAT=`ls /sys/class/power_supply | grep BAT | head -n 1`
+  BAT_LVL=$(cat /sys/class/power_supply/${BAT}/capacity)
+
+  echo "$BAT_LVL"
+
+}
+battery_stat() {
+	BAT=`ls /sys/class/power_supply | grep BAT | head -n 1`
+  STAT=$(cat /sys/class/power_supply/${BAT}/status)
+  
+  if [[ "$STAT" == "Charging" ]]; then
+    if [[ "$NOTIFIED" == false ]]; then
+      notify-send "Battery" "Charging"
+      echo "true" > "$N_STATE_FILE"
+    fi
+    
+  else
+    echo "false" > "$N_STATE_FILE"
+  fi
+
+
+  echo "$STAT"
+}
+
+battery_notif() {
+  BAT_LVL=$(battery)
+  if (( $BAT_LVL <= 25 )) && [[ "$(battery_stat)" == "Discharging" ]]; then
+    notify-send -u critical "Battery" "Battery low, please charge"
+    echo "please charge"
+  fi 
+
+}
+
+if [[ "$1" == "--bat" ]]; then
+	battery
+elif [[ "$1" == "--bat-notif" ]]; then
+  battery_notif
+elif [[ "$1" == "--bat-st" ]]; then
+	battery_stat
+fi
+

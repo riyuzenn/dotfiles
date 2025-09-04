@@ -1,0 +1,3 @@
+
+(include "./src/bar/widgets.yuck")
+(include "./src/bar/windows.yuck")

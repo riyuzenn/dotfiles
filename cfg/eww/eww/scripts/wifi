@@ -1,0 +1,32 @@
+#!/bin/bash
+
+status=$(nmcli g | grep -oE "disconnected")
+ssid=$(nmcli -t -f NAME connection show --active)
+contype=$(nmcli -t -f TYPE connection show --active)
+icon=""
+
+if [[ $contype == *"ethernet"* ]]; then
+  ssid="Ethernet"
+#   icon=""
+fi
+
+if [ $status ] ; then
+    icon=""
+    text=""
+    col="#575268"
+
+else    
+    text="${ssid}"
+    col="#a1bdce"
+fi
+
+
+
+if [[ "$1" == "--COL" ]]; then
+    echo $col	
+elif [[ "$1" == "--ESSID" ]]; then
+	echo $text
+elif [[ "$1" == "--ICON" ]]; then
+	echo $icon
+fi
+
