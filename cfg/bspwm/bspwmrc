@@ -16,16 +16,17 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a firefox desktop='^3' follow=on
-bspc rule -a spotify desktop='^5' follow=on
-bspc rule -a discord desktop='^4' follow=on
+bspc rule -a firefox desktop='^2' follow=on
+bspc rule -a Spotify desktop='^4' follow=on
+bspc rule -a discord desktop='^3' follow=on
 
 # Startup
-pulseaudio -D &
 xsetroot -cursor_name left_ptr
-picom --experimental-backends --backend glx -b &
+picom --animations -b &
 dunst &
 nitrogen --restore &
-$HOME/.local/bin/eww open bar -c $HOME/.config/eww
+$HOME/.local/bin/eww open bar -c $HOME/.config/eww &
+xdo lower -N Eww
+
 
 
