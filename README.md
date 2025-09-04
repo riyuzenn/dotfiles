@@ -5,7 +5,6 @@
 <div align="center">
   <h2>:sparkles: <samp>INFORMATION </samp> </h2>
   <a href="https://github.com/riyuzenn/dotfiles#construction-installation"><b><samp> installation </samp></b></a> |
-  <a href="https://github.com/riyuzenn/dotfiles/tree/d4c436a41e36256e93bdc445829e75944bf7d714"><b><samp> previous rice </samp></b></a> |
   <a href="https://github.com/riyuzenn/dotfiles#keyboard-keybindings"><b><samp> keybindings </samp></b></a> |
   <a href="https://github.com/riyuzenn/dotfiles#-thanks-to"><b><samp> credits </samp></b></a> |
 </div>
@@ -55,7 +54,7 @@ Installing dependencies.
 paru -Sy --needed xorg xorg-xinit xorg-xsetroot \
   nitrogen polybar dunst rofi alacritty neovim \
   bspwm-rounded-corners sxhkd zsh firefox neofetch \
-  maim gpick picom-jonaburg-git jgmenu cava
+  maim gpick picom-fitlabs-git jgmenu cava
   
 # set zsh as default shell
 chsh -s $(which zsh)
