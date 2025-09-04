@@ -15,15 +15,14 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 Print
-   maim ~/pictures/screenshot/$(date +%s).png && prntscrn
+  maim ~/pictures/screenshot/$(date +%s).png && $HOME/.local/bin/prntscrn ~/pictures/screenshot/$(date +%s).png
 
 super + .
   emote
 
-# My keyboard is acting weird when using super + prtnscrn since im using 60% keyboard
-# you can modify it whatever you want
+# snip
 shift + Print
-  maim -s | xclip -selection clipboard -t image/png && prntscrn snip
+  maim -s | tee /tmp/screenshot.png | xclip -selection clipboard -t image/png && $HOME/.local/bin/prntscrn snip /tmp/screenshot.png
 
 #
 # bspwm hotkeys
