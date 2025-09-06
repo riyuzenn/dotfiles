@@ -10,9 +10,6 @@
 </div>
   <br>
    
-   > [!WARNING]  
-   > Currently outdated. Ill try to update it soon :)
-   
    > [!NOTE]
    > Note: some of configs were stolen. If you are the author, just open an issue for creds.
    
@@ -76,6 +73,13 @@ Information about the install script:
 $ chmod +x ./install && ./install
 ```
 
+## changelog
+- use picom-fitlabs-git instead of picom-jonaburg-git
+- update prntscrn script
+- update eww bar by adding battery notifier
+
+
+  
 ## :keyboard: Keybindings
  key | function |
 | :--- | :-------- |
