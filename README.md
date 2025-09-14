@@ -11,7 +11,7 @@
   <br>
    
    > [!NOTE]
-   > Note: some of configs were stolen. If you are the author, just open an issue for creds.
+   > Some of configs were stolen. If you are the author, just open an issue for creds.
    
    <img src="assets/showcase.png" alt="Rice Showcase" align="right" width="400px">
    List of configurations I used to personalize my own system.  
